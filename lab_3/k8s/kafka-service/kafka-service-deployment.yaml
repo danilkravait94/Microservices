@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kafka-service-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kafka-service
+  template:
+    metadata:
+      labels:
+        app: kafka-service
+    spec:
+      containers:
+        - image: kafka-service:0.3.0
+          imagePullPolicy: Never
+          name: kafka-service
+          ports:
+            - containerPort: 8080

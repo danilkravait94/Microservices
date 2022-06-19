@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\services",
+    "\\services\\service1",
+    "\\services\\service1\\src",
+    "\\services\\service2",
+    "\\services\\service2\\src"
+  ],
+  "PreviewInSolutionExplorer": false
+}

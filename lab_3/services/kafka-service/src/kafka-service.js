@@ -1,10 +1,11 @@
-const { Kafka } = require('kafkajs');
+// const { Kafka } = require('kafkajs');
+import { Kafka } from 'kafkajs';
 
 const clientId = 'kafka-service';
 const brokers = ['kafka:9092'];
 const topic = 'microservices';
 
-const kafka = new Kafka({ clientId, ssl: true, brokers });
+const kafka = new Kafka({ clientId, brokers });
 const producer = kafka.producer();
 
 const produce = async () => {
@@ -18,7 +19,7 @@ const produce = async () => {
 				topic,
 				messages: [
 					{
-						key: String(i),
+						key: String(index),
 						value: 'this is message ' + index,
 					},
 				],

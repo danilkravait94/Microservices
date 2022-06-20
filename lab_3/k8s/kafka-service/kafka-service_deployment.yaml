@@ -9,12 +9,12 @@ spec:
       app: kafka-service
   template:
     metadata:
-      labels:
-        app: kafka-service
+     labels:
+       app: kafka-service
     spec:
       containers:
-        - image: kafka-service:0.3.0
+        - image: kafka-service:0.1.0
           imagePullPolicy: Never
           name: kafka-service
           ports:
-            - containerPort: 8080
+            - containerPort: 5000

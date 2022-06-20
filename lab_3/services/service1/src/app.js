@@ -1,4 +1,5 @@
 const { Kafka } = require('kafkajs');
+// import { Kafka } from 'kafkajs';
 
 const clientId = 'service1';
 const brokers = ['kafka:9092'];
@@ -14,11 +15,9 @@ const consume = async () => {
 	await consumer.subscribe({ topic });
 	await consumer.run({
 		eachMessage: ({ message }) => {
-			console.log(`received message: ${message.value}`);
+			console.log(`message: ${message.value}`);
 		},
 	})
 }
-
-
 
 consume();

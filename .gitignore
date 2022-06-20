@@ -4,7 +4,8 @@
 node_modules
 .pnp
 .pnp.js
-
+/.vs
+/lab_3from1
 # testing
 coverage
 

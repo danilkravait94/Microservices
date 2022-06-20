@@ -26,8 +26,6 @@ spec:
                 fieldRef:
                   apiVersion: v1
                   fieldPath: status.podIP
-            - name: KAFKA_ADVERTISED_HOST_NAME
-              value: kafka
             - name: KAFKA_INTER_BROKER_LISTENER_NAME
               value: INTERNAL
             - name: ALLOW_PLAINTEXT_LISTENER

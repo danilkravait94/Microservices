@@ -1,4 +1,5 @@
 const { Kafka } = require('kafkajs');
+// import { Kafka } from 'kafkajs';
 
 const clientId = 'service2';
 const brokers = ['kafka:9092'];

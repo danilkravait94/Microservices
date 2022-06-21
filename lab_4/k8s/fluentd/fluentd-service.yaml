@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fluentd
+  labels:
+    service: fluentd
+spec:
+  type: NodePort
+  selector:
+    name: fluentd
+    run: fluentd
+  ports:
+  - port: 24224
+    targetPort: 24224

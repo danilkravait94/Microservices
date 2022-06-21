@@ -22,3 +22,14 @@ kubectl apply -f k8s/kafka-service
 
 kubectl apply -f k8s/ingress.yaml
 
+minikube addons enable metrics-server
+
+kubectl create namespace monitoring
+
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+
+helm install --namespace monitoring prometheus prometheus-community/kube-prometheus-stack
+
+# kubectl config set-context --current --namespace=monitoring
+
+kubectl apply -f k8s/grafana
